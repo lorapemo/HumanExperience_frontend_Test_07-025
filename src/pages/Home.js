@@ -3,12 +3,14 @@ import { Container, Accordion, Spinner, Alert, Badge, Button } from 'react-boots
 import { useGetTask } from '../hook/useTask';
 import { TaskModal } from '../components/TaskModal';
 import { useState } from 'react';
+import { useSelector } from 'react-redux';
 
 const Home = () => {
   const { getTask, deleteTask, loading, error, tasks, createTask, updateTask } = useGetTask();
   const [showModal, setShowModal] = useState(false);
   const [currentTask, setCurrentTask] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
+  const userId = useSelector((state) => state.auth.userId)
   useEffect(() => {
     getTask();
   }, [getTask]);
@@ -77,6 +79,7 @@ const Home = () => {
   return (
     <Container className="my-5">
       <div className="d-flex justify-content-between align-items-center mb-4">
+        <h4>{`Your ID is ${userId}` }</h4>
         <h1>Your Tasks</h1>
         <Button
           variant="primary"
