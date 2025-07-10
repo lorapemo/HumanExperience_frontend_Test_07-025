@@ -1,6 +1,8 @@
 # BlueAxe_Test_07-025
 Project created as a test for HumanExperience employment.
+
 This project REQUIRES to have a copy of https://github.com/lorapemo/HumanExperience_Test_07-025 running in localhost:3000
+
 Created by Lorenzo Ramón Pérez Morales
 # Installation
 In the weird circumstance that the project doesn't work in your machine please contactme so that I create an ngrok link to temporaly host it
@@ -15,7 +17,7 @@ This project REQUIRES to have a copy of https://github.com/lorapemo/HumanExperie
 git clone https://github.com/lorapemo/HumanExperience_frontend_Test_07-025.git
 ```
 ```
-cd frontend_lorenzoperez_humanexperience
+cd HumanExperience_frontend_Test_07-025
 ```
 // Switch to dev branch
 ```
@@ -25,9 +27,15 @@ git checkout dev
 ```
 npm install
 ```
-// Mke sure you are running the backend on por 3000, 
+```
+npm install @reduxjs/toolkit react-redux
+```
+// Make sure you are running the backend on por 3000, 
+
 // then run the following command
-// and answer the "would you like to run this app in another port since 3000 is busy?"
+
+// and answer the "Something is already running on port 3000." with "Y"
+
 // and check for the app on port 3001
 ```
 npm start
@@ -38,9 +46,11 @@ The you'll be redirected into the login, to login use the email and password you
 You'll be able to create tasks for yourself or for other users you know the id of.
 
 # Final words
-As I write this document and re-test everything I've noted many ways this project could be better.
+I've noted many ways this project could be better.
 
 I could have created more components to re-use
+
+Used a .env and config the app to run in a random port to not have to run the backend first should have been a must
 
 Maybe a more interesting UI
 
